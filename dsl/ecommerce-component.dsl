@@ -40,6 +40,9 @@ workspace "ECommerce Component View" "ECommerce Component View" {
         webapp -> singlePageApplication "Webapp sends commands with application"
         singlePageApplication -> apiApplication "Front end communicates with the back end"
         apiApplication -> database "Uses the database to retrieve items, user data"
+
+        singlePageApplication -> signInController "Makes API calls to" "JSON/HTTPS"
+        mobileApp -> signInController "Makes API calls to" "JSON/HTTPS"
     }
 
     views {
@@ -64,6 +67,8 @@ workspace "ECommerce Component View" "ECommerce Component View" {
             autoLayout
             title "Component View"
         }
+
+        
 
         styles {
             element "Software System" {
