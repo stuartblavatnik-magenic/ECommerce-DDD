@@ -51,7 +51,7 @@ workspace "ECommerce Component View" "ECommerce Component View" {
             title "Container View"
         }
 
-        component ecommerceSoftwareSystem "Components" {
+        component apiApplication "Components" {
             include *
             autoLayout
             title "Component View"
