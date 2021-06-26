@@ -51,6 +51,11 @@ workspace "ECommerce Component View" "ECommerce Component View" {
         mobileApp -> signInController "Makes API calls to" "JSON/HTTPS"
         singlePageApplication -> userAdminController "Makes API calls to" "JSON/HTTPS"
         mobileApp -> userAdminController "Makes API calls to" "JSON/HTTPS"
+        singlePageApplication -> orderAdminController "Makes API calls to" "JSON/HTTPS"
+        mobileApp -> orderAdminController "Makes API calls to" "JSON/HTTPS"
+        singlePageApplication -> productAdminController "Makes API calls to" "JSON/HTTPS"
+        mobileApp -> productAdminController "Makes API calls to" "JSON/HTTPS"
+
 
         signInController -> securityComponent "Uses"
         securityComponent -> database "Uses"
