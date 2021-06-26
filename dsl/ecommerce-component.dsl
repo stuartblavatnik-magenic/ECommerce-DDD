@@ -12,6 +12,8 @@ workspace "ECommerce Component View" "ECommerce Component View" {
             database = container "Database" "Stores user profiles and store items" "Postgres"
             apiApplication = container "API Application" "Back End Functionality" "Java SpringBoot" {
                 signInController = component "Sign in Controller" "Allows users to sign into the E-Commerce System" "Spring MVC REST Controller"
+                userIdGenerator = component "User ID Generator" "Generates user ID's" "Spring Microservice"
+                orderIdGenerator = component "Order ID Generator" "Generates order ID's" "Spring Microservice"
             }
             mobileApp = container "Mobile Application" "Mobile Interface" "Kotlin"
         }
