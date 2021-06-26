@@ -55,3 +55,6 @@ June 12:
   Start container view
 
 June 26:
+
+  Added container view diagram
+  Added component view
