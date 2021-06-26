@@ -57,4 +57,7 @@ June 12:
 June 26:
 
   Added container view diagram
+  
   Added component view
+  
+  Begin code modeling https://www.jetbrains.com/help/idea/class-diagram.html 
