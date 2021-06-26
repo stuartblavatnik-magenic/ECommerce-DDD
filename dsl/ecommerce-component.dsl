@@ -12,8 +12,10 @@ workspace "ECommerce Component View" "ECommerce Component View" {
             database = container "Database" "Stores user profiles and store items" "Postgres"
             apiApplication = container "API Application" "Back End Functionality" "Java SpringBoot" {
                 signInController = component "Sign in Controller" "Allows users to sign into the E-Commerce System" "Spring MVC REST Controller"
-                userIdGenerator = component "User ID Generator" "Generates user ID's" "Spring Microservice"
-                orderIdGenerator = component "Order ID Generator" "Generates order ID's" "Spring Microservice"
+                securityComponent = component "Security Component" "Provides functionality related to signing in, changing passwords, etc." "SpringBoot Microservice"
+                userIdGenerator = component "User ID Generator" "Generates user ID's" "SpringBoot Microservice"
+                productIdGenerator = component "Product ID Generator" "Generates product ID's" "SpringBoot Microservice"
+                orderIdGenerator = component "Order ID Generator" "Generates order ID's" "SpringBoot Microservice"
             }
             mobileApp = container "Mobile Application" "Mobile Interface" "Kotlin"
         }
@@ -55,6 +57,10 @@ workspace "ECommerce Component View" "ECommerce Component View" {
 
         component apiApplication "Components" {
             include *
+            animation {
+                singlePageApplication mobileApp database 
+                signInController securityComponent
+            }
             autoLayout
             title "Component View"
         }
