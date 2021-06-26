@@ -1,4 +1,4 @@
-workspace "ECommerce Container View" "ECommerce Container View" {
+workspace "ECommerce Component View" "ECommerce Component View" {
 
     model {
         shopper = person "Shopper" "Person who purchases items.  This person can also rate items"
@@ -10,7 +10,9 @@ workspace "ECommerce Container View" "ECommerce Container View" {
             webapp = container "Web Application" "Delivers the static content and the single-page application" "React"
             singlePageApplication = container "Single-Page Application" "Provides functionality to all users via their web browsers" "React"
             database = container "Database" "Stores user profiles and store items" "Postgres"
-            apiApplication = container "API Application" "Back End Functionality" "Java SpringBoot"
+            apiApplication = container "API Application" "Back End Functionality" "Java SpringBoot" {
+                signInController = component "Sign in Controller" "Allows users to sign into the E-Commerce System" "Spring MVC REST Controller"
+            }
             mobileApp = container "Mobile Application" "Mobile Interface" "Kotlin"
         }
 
@@ -40,11 +42,19 @@ workspace "ECommerce Container View" "ECommerce Container View" {
         systemContext ecommerceSoftwareSystem {
             include *
             autoLayout
+            title "Context View"
         }
 
         container ecommerceSoftwareSystem "Containers" {
             include *
             autoLayout
+            title "Container View"
+        }
+
+        component ecommerceSoftwareSystem "Components" {
+            include *
+            autoLayout
+            title "Component View"
         }
 
         styles {
