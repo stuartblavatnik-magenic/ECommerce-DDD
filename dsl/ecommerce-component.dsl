@@ -77,6 +77,10 @@ workspace "ECommerce Component View" "ECommerce Component View" {
                 background #08427b
                 color #ffffff
             }
+            element "Component" {
+                background #85bbf0
+                color #000000
+            }
         }
     }
     
