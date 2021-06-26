@@ -43,6 +43,7 @@ workspace "ECommerce Component View" "ECommerce Component View" {
 
         singlePageApplication -> signInController "Makes API calls to" "JSON/HTTPS"
         mobileApp -> signInController "Makes API calls to" "JSON/HTTPS"
+        signInController -> securityComponent "Uses"
     }
 
     views {
