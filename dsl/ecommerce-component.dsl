@@ -13,6 +13,7 @@ workspace "ECommerce Component View" "ECommerce Component View" {
             apiApplication = container "API Application" "Back End Functionality" "Java SpringBoot" {
                 signInController = component "Sign in Controller" "Allows users to sign into the E-Commerce System" "Spring MVC REST Controller"
                 securityComponent = component "Security Component" "Provides functionality related to signing in, changing passwords, etc." "SpringBoot Microservice"
+                userAdminController = component "User Component" "CRUD Operations for users" "SpringBoot Microservice" 
                 userIdGenerator = component "User ID Generator" "Generates user ID's" "SpringBoot Microservice"
                 productIdGenerator = component "Product ID Generator" "Generates product ID's" "SpringBoot Microservice"
                 orderIdGenerator = component "Order ID Generator" "Generates order ID's" "SpringBoot Microservice"
@@ -43,7 +44,12 @@ workspace "ECommerce Component View" "ECommerce Component View" {
 
         singlePageApplication -> signInController "Makes API calls to" "JSON/HTTPS"
         mobileApp -> signInController "Makes API calls to" "JSON/HTTPS"
+        singlePageApplication -> userAdminController "Makes API calls to" "JSON/HTTPS"
+        mobileApp -> userAdminController "Makes API calls to" "JSON/HTTPS"
+
         signInController -> securityComponent "Uses"
+        userAdminController -> userIdGenerator "Uses"
+        userIdGenerator -> database "Uses"
     }
 
     views {
@@ -62,8 +68,13 @@ workspace "ECommerce Component View" "ECommerce Component View" {
         component apiApplication "Components" {
             include *
             animation {
-                singlePageApplication mobileApp database 
-                signInController securityComponent
+                singlePageApplication 
+                mobileApp 
+                database 
+                signInController 
+                securityComponent
+                userAdminController
+                userIdGenerator
             }
             autoLayout
             title "Component View"
