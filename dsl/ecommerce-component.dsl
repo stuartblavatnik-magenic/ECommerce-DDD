@@ -20,7 +20,7 @@ workspace "ECommerce Component View" "ECommerce Component View" {
                 productAdminController = component "Product Component" "CRUD Operations for products" "SpringBoot Microservice"
                 productIdGenerator = component "Product ID Generator" "Generates product ID's" "SpringBoot Microservice"
 
-
+                orderAdminController = component "Order Component" "CRUD Operations for orders" "SpringBoot Microservice"
                 orderIdGenerator = component "Order ID Generator" "Generates order ID's" "SpringBoot Microservice"
             }
             mobileApp = container "Mobile Application" "Mobile Interface" "Kotlin"
@@ -53,11 +53,16 @@ workspace "ECommerce Component View" "ECommerce Component View" {
         mobileApp -> userAdminController "Makes API calls to" "JSON/HTTPS"
 
         signInController -> securityComponent "Uses"
+        securityComponent -> database "Uses"
+
         userAdminController -> userIdGenerator "Uses"
         userIdGenerator -> database "Uses"
 
         productAdminController -> productIdGenerator "Uses"
         productIdGenerator -> database "Uses"
+
+        orderAdminController -> orderIdGenerator "Uses"
+        orderIdGenerator -> database "Uses"
     }
 
     views {
@@ -85,6 +90,8 @@ workspace "ECommerce Component View" "ECommerce Component View" {
                 userIdGenerator
                 productAdminController
                 productIdGenerator
+                orderAdminController
+                orderIdGenerator
             }
             autoLayout
             title "Component View"
