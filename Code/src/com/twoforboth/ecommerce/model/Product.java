@@ -1,6 +1,8 @@
 package com.twoforboth.ecommerce.model;
 
-public class Product {
+import lombok.Data;
+
+public @Data class Product {
     Long id;
     String name;
     String description;
