@@ -61,3 +61,5 @@ June 26:
   Added component view
   
   Begin code modeling https://www.jetbrains.com/help/idea/class-diagram.html 
+  
+  Code Iris -- IntelliJ UML from code generation: https://stackoverflow.com/questions/41290430/using-code-iris-with-intellij-to-generate-class-diagram
