@@ -4,9 +4,11 @@ import lombok.Data;
 
 import java.util.Date;
 
-public @Data
-class OrderDetail {
+@Data
+public class OrderDetail {
     private Long productId;
     private OrderAction orderAction;
     private Date actionDate;
+    private Double orderPrice;
+    private Long recipientId;
 }
