@@ -69,3 +69,11 @@ June 27:
   Generated component view and added to git
   
   Added classes
+  
+July 3
+  
+  Read 1/4 of Domain Driven Reference
+  
+  Added more models 
+  
+  Researching how to better generate UML's from code
