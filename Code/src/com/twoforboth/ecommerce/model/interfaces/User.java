@@ -2,6 +2,9 @@ package com.twoforboth.ecommerce.model.interfaces;
 
 import com.twoforboth.ecommerce.model.impl.OrderDetailImpl;
 
+import java.util.Date;
+import java.util.List;
+
 public interface User {
     Long getId();
 
@@ -13,9 +16,9 @@ public interface User {
 
     Boolean getIsEnabled();
 
-    java.util.Date getCreated();
+    Date getCreated();
 
-    java.util.List<OrderDetailImpl> getOrderDetails();
+    List<OrderDetailImpl> getOrderDetails();
 
     void setId(Long id);
 
@@ -27,9 +30,9 @@ public interface User {
 
     void setIsEnabled(Boolean isEnabled);
 
-    void setCreated(java.util.Date created);
+    void setCreated(Date created);
 
-    void setOrderDetails(java.util.List<OrderDetailImpl> orderDetails);
+    void setOrderDetails(List<OrderDetailImpl> orderDetails);
 
     boolean equals(Object o);
 

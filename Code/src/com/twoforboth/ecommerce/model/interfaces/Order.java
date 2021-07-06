@@ -1,20 +1,19 @@
 package com.twoforboth.ecommerce.model.interfaces;
 
-import com.twoforboth.ecommerce.model.impl.OrderDetailImpl;
-import com.twoforboth.ecommerce.model.impl.UserImpl;
+import java.util.List;
 
 public interface Order {
     Long getId();
 
-    UserImpl getUserImpl();
+    User getUser();
 
-    java.util.List<OrderDetailImpl> getOrderDetailList();
+    List<OrderDetail> getOrderDetailList();
 
     void setId(Long id);
 
-    void setUserImpl(UserImpl userImpl);
+    void setUser(User user);
 
-    void setOrderDetailList(java.util.List<OrderDetailImpl> orderDetailList);
+    void setOrderDetailList(List<OrderDetail> orderDetailList);
 
     boolean equals(Object o);
 

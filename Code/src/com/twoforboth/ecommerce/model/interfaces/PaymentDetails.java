@@ -1,23 +1,23 @@
 package com.twoforboth.ecommerce.model.interfaces;
 
-import com.twoforboth.ecommerce.model.impl.PaymentDetailsImpl;
+import java.util.Date;
 
 public interface PaymentDetails {
     Long getId();
 
-    PaymentDetailsImpl getPaymentDetail();
+    PaymentDetails getPaymentDetails();
 
     String getCardNumber();
 
-    java.util.Date getExpirationDate();
+    Date getExpirationDate();
 
     void setId(Long id);
 
-    void setPaymentDetail(PaymentDetailsImpl paymentDetail);
+    void setPaymentDetails(PaymentDetails paymentDetails);
 
     void setCardNumber(String cardNumber);
 
-    void setExpirationDate(java.util.Date expirationDate);
+    void setExpirationDate(Date expirationDate);
 
     boolean equals(Object o);
 

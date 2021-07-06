@@ -1,25 +1,29 @@
 package com.twoforboth.ecommerce.model.interfaces;
 
+import com.twoforboth.ecommerce.model.enums.OrderAction;
+
+import java.util.Date;
+
 public interface OrderDetail {
-    Long getProductId();
+    Product getProduct();
 
-    com.twoforboth.ecommerce.model.enums.OrderAction getOrderAction();
+    OrderAction getOrderAction();
 
-    java.util.Date getActionDate();
+    Date getActionDate();
 
     Double getOrderPrice();
 
-    Long getRecipientId();
+    Recipient getRecipient();
 
-    void setProductId(Long productId);
+    void setProduct(Product product);
 
-    void setOrderAction(com.twoforboth.ecommerce.model.enums.OrderAction orderAction);
+    void setOrderAction(OrderAction orderAction);
 
-    void setActionDate(java.util.Date actionDate);
+    void setActionDate(Date actionDate);
 
     void setOrderPrice(Double orderPrice);
 
-    void setRecipientId(Long recipientId);
+    void setRecipient(Recipient recipient);
 
     boolean equals(Object o);
 
