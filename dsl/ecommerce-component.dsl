@@ -21,8 +21,13 @@ workspace "ECommerce Component View" "ECommerce Component View" {
                 productIdGenerator = component "Product ID Generator" "Generates product ID's" "SpringBoot Microservice"
 
                 orderAdminController = component "Order Component" "CRUD Operations for orders" "SpringBoot Microservice"
-                orderIdGenerator = component "Order ID Generator" "Generates order ID's" "SpringBoot Microservice"
+
             }
+            fulfillmentApplication = container "Fulfillment Application" "Inventory Application" "Java SpringBoot" {
+                inventorySearchController = component "Inventory Search Component" "Wrapper of API's to search inventory" "SpringBoot Microservice"
+                inventoryOrderController = component "Inventory Order Component" "Creates / modifies / cancels orders" "SpringBootMicroservice"
+                orderIdGenerator = component "Order ID Generator" "Generates order ID's" "SpringBoot Microservice"
+            } 
             mobileApp = container "Mobile Application" "Mobile Interface" "Kotlin"
         }
 
@@ -66,8 +71,13 @@ workspace "ECommerce Component View" "ECommerce Component View" {
         productAdminController -> productIdGenerator "Uses"
         productIdGenerator -> database "Uses"
 
-        orderAdminController -> orderIdGenerator "Uses"
+        inventoryOrderController -> orderIdGenerator "Uses"
+        orderAdminController -> fulfillmentApplication "Uses"
         orderIdGenerator -> database "Uses"
+        fulfillmentApplication -> database "Uses"
+
+        apiApplication -> fulfillmentApplication "Uses"
+        inventorySearchController -> database "Uses"
     }
 
     views {
@@ -83,7 +93,7 @@ workspace "ECommerce Component View" "ECommerce Component View" {
             title "Container View"
         }
 
-        component apiApplication "Components" {
+        component apiApplication "apiApplication_Components" {
             include *
             animation {
                 singlePageApplication 
@@ -96,10 +106,22 @@ workspace "ECommerce Component View" "ECommerce Component View" {
                 productAdminController
                 productIdGenerator
                 orderAdminController
+                fulfillmentApplication
+            }
+            autoLayout
+            title "API Application Component View"
+        }
+
+        component fulfillmentApplication "Fulfillment_Application_Components" {
+            include *
+            animation {
+                
+                inventoryOrderController
+                inventorySearchController
                 orderIdGenerator
             }
             autoLayout
-            title "Component View"
+            title "Fulfillment Application Component View"
         }
 
         
