@@ -82,4 +82,7 @@ July 6
   
   Added fulfillment container and view
   
+  Refactored code
+  
+  Added class diagram
   
