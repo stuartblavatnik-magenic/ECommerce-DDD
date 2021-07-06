@@ -1,8 +1,8 @@
-package com.twoforboth.ecommerce.model;
+package com.twoforboth.ecommerce.model.impl;
 
 import lombok.Data;
 
-public @Data class Product {
+public @Data class ProductImpl implements com.twoforboth.ecommerce.model.interfaces.Product {
     Long id;
     String name;
     String description;
