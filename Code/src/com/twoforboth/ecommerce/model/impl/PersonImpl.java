@@ -1,17 +1,17 @@
-package com.twoforboth.ecommerce.model;
+package com.twoforboth.ecommerce.model.impl;
 
+
+import com.twoforboth.ecommerce.model.interfaces.Person;
 import lombok.Data;
 
 import java.util.Date;
-import java.util.List;
 
-public @Data
-class User {
+public
+@Data abstract class PersonImpl implements Person {
     private Long id;
     private String name;
     private String address;
     private String phoneNumber;
     private Boolean isEnabled;
     private Date created;
-    private List<OrderDetail> orderDetails;
 }
