@@ -53,3 +53,36 @@ June 12:
   
   Rename / cleanup Context View
   Start container view
+
+June 26:
+
+  Added container view diagram
+  
+  Added component view
+  
+  Begin code modeling https://www.jetbrains.com/help/idea/class-diagram.html 
+  
+  Code Iris -- IntelliJ UML from code generation: https://stackoverflow.com/questions/41290430/using-code-iris-with-intellij-to-generate-class-diagram
+  
+June 27:
+  
+  Generated component view and added to git
+  
+  Added classes
+  
+July 3
+  
+  Read 1/4 of Domain Driven Reference
+  
+  Added more models 
+  
+  Researching how to better generate UML's from code
+  
+July 6
+  
+  Added fulfillment container and view
+  
+  Refactored code
+  
+  Added class diagram
+  

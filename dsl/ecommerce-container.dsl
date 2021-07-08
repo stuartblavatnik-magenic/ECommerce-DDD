@@ -22,15 +22,14 @@ workspace "ECommerce Container View" "ECommerce Container View" {
         shopper -> ecommerceSoftwareSystem "Uses the application"
 
         shopper -> webapp "Uses the Web Application to search, buy and return items"
-        merchant -> webapp "Uses the Web Application to search, sell and restock items"
-        admin -> webapp "Uses the admin portion of the application for maintanence of the system"
-        analyst -> webapp "Uses the system to retrieve statistics"
+        merchant -> webapp "Uses the Web Application to search, add, remove, sell and restock items"
+        admin -> webapp "Uses the admin section of the application for maintanence of the system"
+        analyst -> webapp "Uses the system to retrieve statistics for buying and selling trends"
 
-        shopper -> mobileApp "Uses"
-        merchant -> mobileApp "Uses"
-	    admin -> mobileApp "Uses"
-        analyst -> mobileApp "Uses"
-
+        shopper -> mobileApp "Uses the Mobile Application to search, buy and return items"
+        merchant -> mobileApp "Uses the Mobile Application to search, add, remove, sell, and restock items"
+	    admin -> mobileApp "Uses the Mobile Application for monitoring and maintenance of the system"
+        analyst -> mobileApp "Uses the Mobile Application to receive trending alerts of the system"
 
         webapp -> singlePageApplication "Webapp sends commands with application"
         singlePageApplication -> apiApplication "Front end communicates with the back end"
