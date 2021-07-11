@@ -15,6 +15,8 @@ public interface OrderDetail {
 
     Recipient getRecipient();
 
+    PaymentDetails getPaymentDetails();
+
     void setProduct(Product product);
 
     void setOrderAction(OrderAction orderAction);
@@ -24,6 +26,8 @@ public interface OrderDetail {
     void setOrderPrice(Double orderPrice);
 
     void setRecipient(Recipient recipient);
+
+    void setPaymentDetails(PaymentDetails paymentDetails);
 
     boolean equals(Object o);
 

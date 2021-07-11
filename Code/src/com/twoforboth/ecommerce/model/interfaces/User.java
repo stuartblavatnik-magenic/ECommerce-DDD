@@ -18,7 +18,7 @@ public interface User {
 
     Date getCreated();
 
-    List<OrderDetailImpl> getOrderDetails();
+    List<Order> getOrders();
 
     void setId(Long id);
 
@@ -31,8 +31,6 @@ public interface User {
     void setIsEnabled(Boolean isEnabled);
 
     void setCreated(Date created);
-
-    void setOrderDetails(List<OrderDetailImpl> orderDetails);
 
     boolean equals(Object o);
 

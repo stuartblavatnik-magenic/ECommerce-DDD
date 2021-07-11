@@ -1,11 +1,13 @@
 package com.twoforboth.ecommerce.model.interfaces;
 
+import com.twoforboth.ecommerce.model.enums.PaymentTypes;
+
 import java.util.Date;
 
 public interface PaymentDetails {
     Long getId();
 
-    PaymentDetails getPaymentDetails();
+    PaymentTypes getPaymentType();
 
     String getCardNumber();
 
@@ -13,7 +15,7 @@ public interface PaymentDetails {
 
     void setId(Long id);
 
-    void setPaymentDetails(PaymentDetails paymentDetails);
+    void setPaymentType(PaymentTypes paymentType);
 
     void setCardNumber(String cardNumber);
 
