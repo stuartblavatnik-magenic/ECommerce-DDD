@@ -86,3 +86,9 @@ July 6
   
   Added class diagram
   
+July 11
+  
+  Went with Lucid Charts and manual adding of class diagram.
+  
+  Refactored some incorrect relationships within the model.
+  
