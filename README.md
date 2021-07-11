@@ -1,6 +1,24 @@
 # ECommerce-DDD
 Magenic Masters DDD Project ECommerce
 
+I have delivered a relatively simplistic view of an ECommerce site.  My biggest takeaway from doing this project was noticing the lack of decent tooling 
+to automate the generation of the charts from code.  Then again, I paid nothing for the tools I found so ...
+
+I did externalize as much as I could.  I'm in full agreement of not trying to build the entire world when tools / systems already exist to do some of the 
+more mundane and repetative tasks (fulfillment, payments, etc.)
+
+As for persona's my idea was to create an abstract Person class that all types of users can be.  I would ultimately tie these to authorization.
+
+My project structure is:
+
+1) Code in the Code/src...folde  (Interfaces, Classes and Enums)
+2) The diagrams folder includes the following views (context, container, api components and fulfillment componets) Class views (DDD Class Diagram is the 
+  decent one, the ClassView.png is an attempt to generate from code using an IntelliJ plugin)
+3) The dsl folder is the input to structurizr which generated the majority of the diagrams as mentioned in 2.  This was by far the best tool I encountered.
+
+------------------------------------------------------------------------------------------------------------------------------------------
+The ask:
+
 1) Make a GitHub Repo -- DONE
 2) Invite instructors (and team members if any) -- DONE
 3) Pick a complex system to model -- DONE
@@ -10,7 +28,7 @@ Magenic Masters DDD Project ECommerce
   SQL or other schema that represents the mapping of DDD to storage
 5) As you work through the problem, PR the instructors
 6) We'll provide feedback, and ultimately CE Credits
-
+---------------------------------------------------------------------------------------------------------------------------------------------
 Milestones:
 
 June 6: 
@@ -85,4 +103,10 @@ July 6
   Refactored code
   
   Added class diagram
+  
+July 11
+  
+  Went with Lucid Charts and manual adding of class diagram.
+  
+  Refactored some incorrect relationships within the model.
   

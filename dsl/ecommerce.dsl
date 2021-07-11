@@ -36,8 +36,6 @@ workspace "ECommerce Component View" "ECommerce Component View" {
 	    admin -> ecommerceSoftwareSystem "Uses"
         analyst -> ecommerceSoftwareSystem "Uses"
 
-        shopper -> ecommerceSoftwareSystem "Uses the application"
-
         shopper -> webapp "Uses the Web Application to search, buy and return items"
         merchant -> webapp "Uses the Web Application to search, add, remove, sell and restock items"
         admin -> webapp "Uses the admin section of the application for maintanence of the system"
